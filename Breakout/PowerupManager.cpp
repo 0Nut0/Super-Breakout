@@ -1,5 +1,14 @@
 #include "PowerupManager.h"
 
+#include "PowerupBase.h"
+#include "PowerupBigPaddle.h"
+#include "PowerupSmallPaddle.h"
+#include "PowerupSlowBall.h"
+#include "PowerupFastBall.h"
+#include "PowerupFireBall.h"
+#include "Paddle.h"
+#include "Ball.h"
+
 
 PowerupManager::PowerupManager(sf::RenderWindow* window, Paddle* paddle, Ball* ball)
     : _window(window), _paddle(paddle), _ball(ball), _rng(std::random_device{}())
