@@ -35,6 +35,21 @@ _TO DO_
 
 <Add information to this section about the time you've taken for this task along with a professional changelist.>
 
+Feature Planning 30 mins
+
+Split-Ball Powerup: 1 hr
+   - When Ball collides with anything, the ball will split. Up to five splits are allowed and a split happens once per ball.
+
+Changes:
+
+
+
+Floaty Bricks: 1hr 30 mins
+   - When the ball hits a brick , that brick will drift relative to its impact point, also colliding with other bricks. The ball will also be made smaller in order to make it harder to hit       the bricks
+
+Changes:
+
+
 ---
 
 ### Change log
