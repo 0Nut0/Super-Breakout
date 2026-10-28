@@ -8,7 +8,7 @@
 #include "PowerupFireBall.h"
 #include "Paddle.h"
 #include "Ball.h"
-
+#include "SplitBall.h"
 
 PowerupManager::PowerupManager(sf::RenderWindow* window, Paddle* paddle, Ball* ball)
     : _window(window), _paddle(paddle), _ball(ball), _rng(std::random_device{}())
@@ -73,7 +73,7 @@ void PowerupManager::spawnPowerup()
 
     float spawnX = xDist(_rng);
 
-    switch (rand() % 5)
+    switch (rand() % 6)
     {
     case 0:
         _powerups.push_back(new PowerupBigPaddle(_window, _paddle, _ball, spawnX));
@@ -81,16 +81,23 @@ void PowerupManager::spawnPowerup()
     case 1:
         _powerups.push_back(new PowerupSlowBall(_window, _paddle, _ball, spawnX));
         break;
+    //case 2:
+    //    //_powerups.push_back(new PowerupFastBall(_window, _paddle, _ball, spawnX));
+    //    break;
     case 2:
-        _powerups.push_back(new PowerupFastBall(_window, _paddle, _ball, spawnX));
-        break;
-    case 3:
         _powerups.push_back(new PowerupSmallPaddle(_window, _paddle, _ball, spawnX));
         break;
-    case 4:
+    case 3:
         _powerups.push_back(new PowerupFireBall(_window, _paddle, _ball, spawnX));
         break;
+    case 4:
+        _powerups.push_back(new SplitBall(_window, _paddle, _ball, spawnX));
+        break;
     }
+
+       // _powerups.push_back(new SplitBall(_window, _paddle, _ball, spawnX));
+
+
 
 }
 
